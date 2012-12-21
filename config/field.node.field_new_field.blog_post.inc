@@ -11,7 +11,8 @@ $data = array(
     'translatable' => '0',
     'entity_types' => array(),
     'settings' => array(
-      'max_length' => '255',
+      'uri_scheme' => 'public',
+      'default_image' => 0,
     ),
     'storage' => array(
       'type' => 'field_sql_storage',
@@ -22,49 +23,73 @@ $data = array(
         'sql' => array(
           'FIELD_LOAD_CURRENT' => array(
             'field_data_field_new_field' => array(
-              'value' => 'field_new_field_value',
-              'format' => 'field_new_field_format',
+              'fid' => 'field_new_field_fid',
+              'alt' => 'field_new_field_alt',
+              'title' => 'field_new_field_title',
+              'width' => 'field_new_field_width',
+              'height' => 'field_new_field_height',
             ),
           ),
           'FIELD_LOAD_REVISION' => array(
             'field_revision_field_new_field' => array(
-              'value' => 'field_new_field_value',
-              'format' => 'field_new_field_format',
+              'fid' => 'field_new_field_fid',
+              'alt' => 'field_new_field_alt',
+              'title' => 'field_new_field_title',
+              'width' => 'field_new_field_width',
+              'height' => 'field_new_field_height',
             ),
           ),
         ),
       ),
     ),
     'foreign keys' => array(
-      'format' => array(
-        'table' => 'filter_format',
+      'fid' => array(
+        'table' => 'file_managed',
         'columns' => array(
-          'format' => 'format',
+          'fid' => 'fid',
         ),
       ),
     ),
     'indexes' => array(
-      'format' => array(
-        0 => 'format',
+      'fid' => array(
+        0 => 'fid',
       ),
     ),
     'field_name' => 'field_new_field',
-    'type' => 'text',
-    'module' => 'text',
+    'type' => 'image',
+    'module' => 'image',
     'active' => '1',
     'locked' => '0',
     'cardinality' => '1',
     'deleted' => '0',
     'columns' => array(
-      'value' => array(
+      'fid' => array(
+        'description' => 'The {file_managed}.fid being referenced in this field.',
+        'type' => 'int',
+        'not null' => FALSE,
+        'unsigned' => TRUE,
+      ),
+      'alt' => array(
+        'description' => 'Alternative image text, for the image\'s \'alt\' attribute.',
         'type' => 'varchar',
-        'length' => '255',
+        'length' => 512,
         'not null' => FALSE,
       ),
-      'format' => array(
+      'title' => array(
+        'description' => 'Image title text, for the image\'s \'title\' attribute.',
         'type' => 'varchar',
-        'length' => 255,
+        'length' => 1024,
         'not null' => FALSE,
+      ),
+      'width' => array(
+        'description' => 'The width of the image in pixels.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+      ),
+      'height' => array(
+        'description' => 'The height of the image in pixels.',
+        'type' => 'int',
+        'unsigned' => TRUE,
       ),
     ),
   ),
@@ -72,23 +97,34 @@ $data = array(
     'label' => 'new field',
     'widget' => array(
       'weight' => '-3',
-      'type' => 'text_textfield',
-      'module' => 'text',
+      'type' => 'image_image',
+      'module' => 'image',
       'active' => 1,
       'settings' => array(
-        'size' => '60',
+        'progress_indicator' => 'throbber',
+        'preview_image_style' => 'thumbnail',
       ),
     ),
     'settings' => array(
-      'text_processing' => '0',
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'alt_field' => 0,
+      'title_field' => 0,
+      'default_image' => 0,
       'user_register_form' => FALSE,
     ),
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'type' => 'text_default',
-        'settings' => array(),
-        'module' => 'text',
+        'type' => 'image',
+        'settings' => array(
+          'image_style' => '',
+          'image_link' => '',
+        ),
+        'module' => 'image',
         'weight' => 1,
       ),
       'teaser' => array(
@@ -100,7 +136,6 @@ $data = array(
     ),
     'required' => 0,
     'description' => '',
-    'default_value' => NULL,
     'field_name' => 'field_new_field',
     'entity_type' => 'node',
     'bundle' => 'blog_post',
@@ -116,5 +151,5 @@ $optional = array();
 
 $modules = array(
   0 => 'field_sql_storage',
-  1 => 'text',
+  1 => 'image',
 );

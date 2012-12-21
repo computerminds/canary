@@ -25,7 +25,6 @@ $dependencies = array(
 
 $optional = array(
   'field.node.body.new_content_type' => 'field.node.body.new_content_type',
-  'field.node.field_new_field.new_content_type' => 'field.node.field_new_field.new_content_type',
   'permission.create_new_content_type_content' => 'permission.create_new_content_type_content',
   'permission.edit_own_new_content_type_content' => 'permission.edit_own_new_content_type_content',
   'permission.edit_any_new_content_type_content' => 'permission.edit_any_new_content_type_content',
