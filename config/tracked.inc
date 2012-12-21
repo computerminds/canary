@@ -31,6 +31,7 @@ $tracked = array (
   'permission.edit_any_new_content_type_content' => '55b39b1d983cd43a4eb0b4114bcb4515d6b6dc7b',
   'permission.edit_own_blog_post_content' => '0274c78b01d3c3d3fc7e01e995577b120edcbb49',
   'permission.edit_own_new_content_type_content' => '3d5a2a2a806960fc6af23b4e885c8b5fc4cc98ed',
+  'context.global' => '8340e5c85f482bb61751290ea88e2cf916f667f5',
   'views_view.blog_roll' => 'a2316d874fbdaa0c88a8d290d2088e174ab94b3a',
 );
 
@@ -38,6 +39,6 @@ $tracked = array (
 // The following modules are required to run the configurations of this file.
 
 $modules = array(
-  'views',
-  'node',
+  'ctools',
+  'context',
 );
