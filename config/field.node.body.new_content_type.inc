@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * field.node.body.blog_post.inc
+ * field.node.body.new_content_type.inc
  */
 
 $api = '2.0.0';
@@ -78,18 +78,17 @@ $data = array(
   'field_instance' => array(
     'label' => 'Body',
     'widget' => array(
-      'weight' => '-4',
       'type' => 'text_textarea_with_summary',
-      'module' => 'text',
-      'active' => 1,
       'settings' => array(
-        'rows' => '20',
+        'rows' => 20,
         'summary_rows' => 5,
       ),
+      'weight' => '-4',
+      'module' => 'text',
     ),
     'settings' => array(
-      'text_processing' => '1',
-      'display_summary' => 1,
+      'display_summary' => TRUE,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'display' => array(
@@ -110,18 +109,18 @@ $data = array(
         'weight' => 0,
       ),
     ),
-    'required' => 1,
+    'required' => FALSE,
     'description' => '',
-    'default_value' => NULL,
     'field_name' => 'body',
     'entity_type' => 'node',
-    'bundle' => 'blog_post',
+    'bundle' => 'new_content_type',
     'deleted' => '0',
+    'default_value' => NULL,
   ),
 );
 
 $dependencies = array(
-  'content_type.blog_post' => 'content_type.blog_post',
+  'content_type.new_content_type' => 'content_type.new_content_type',
 );
 
 $optional = array();

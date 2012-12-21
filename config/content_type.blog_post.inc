@@ -17,6 +17,7 @@ $data = (object) array(
 );
 
 $dependencies = array(
+  'variable.field_bundle_settings_node__blog_post' => 'variable.field_bundle_settings_node__blog_post',
   'variable.node_options_blog_post' => 'variable.node_options_blog_post',
   'variable.node_preview_blog_post' => 'variable.node_preview_blog_post',
   'variable.node_submitted_blog_post' => 'variable.node_submitted_blog_post',
@@ -24,6 +25,7 @@ $dependencies = array(
 
 $optional = array(
   'field.node.body.blog_post' => 'field.node.body.blog_post',
+  'field.node.field_new_field.blog_post' => 'field.node.field_new_field.blog_post',
   'permission.create_blog_post_content' => 'permission.create_blog_post_content',
   'permission.edit_own_blog_post_content' => 'permission.edit_own_blog_post_content',
   'permission.edit_any_blog_post_content' => 'permission.edit_any_blog_post_content',

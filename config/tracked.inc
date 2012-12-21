@@ -3,10 +3,12 @@
 // This file contains the current being tracked configurations.
 
 $tracked = array (
-  'content_type.blog_post' => 'ba2fb05d50b70bb4cd7c1c4fa6723ae4dd39cd0b',
-  'field.node.body.blog_post' => '62340572635691202e591db4b4149103d3f7362c',
+  'content_type.blog_post' => 'a859a828e643a6f294ab3e2323a6aa6b68d2ae5c',
+  'field.node.body.blog_post' => 'b26e80ee2dcbd4069780d33f31f8cb3b11b93540',
+  'field.node.field_new_field.blog_post' => '509b3d9c499183c6f1db5b8ffa6dd4e7903eb2c8',
   'variable.admin_theme' => '0302235c297210c67fa4b12bbda12ef63bf6d234',
   'variable.configuration_config_path' => 'e5658e2a44f0f9552808ca14933509827bb23ae8',
+  'variable.field_bundle_settings_node__blog_post' => '3abd6fb48535b1e41c7d701573f2ac636c2ae305',
   'variable.node_options_blog_post' => 'cd158be13b77fa0540dc3e89ed3cc696dd1c18de',
   'variable.node_preview_blog_post' => '00cd637d5fd3dc0d40a4f6db57174e10838adae5',
   'variable.node_submitted_blog_post' => 'fb29ded26afd3db962900d3ab78aeef1444510a3',

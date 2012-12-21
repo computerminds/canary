@@ -1,18 +1,18 @@
 <?php
 /**
  * @file
- * field.node.body.blog_post.inc
+ * field.node.field_new_field.new_content_type.inc
  */
 
 $api = '2.0.0';
 
 $data = array(
   'field_config' => array(
-    'entity_types' => array(
-      0 => 'node',
-    ),
     'translatable' => '0',
-    'settings' => array(),
+    'entity_types' => array(),
+    'settings' => array(
+      'max_length' => '255',
+    ),
     'storage' => array(
       'type' => 'field_sql_storage',
       'settings' => array(),
@@ -21,17 +21,15 @@ $data = array(
       'details' => array(
         'sql' => array(
           'FIELD_LOAD_CURRENT' => array(
-            'field_data_body' => array(
-              'value' => 'body_value',
-              'summary' => 'body_summary',
-              'format' => 'body_format',
+            'field_data_field_new_field' => array(
+              'value' => 'field_new_field_value',
+              'format' => 'field_new_field_format',
             ),
           ),
           'FIELD_LOAD_REVISION' => array(
-            'field_revision_body' => array(
-              'value' => 'body_value',
-              'summary' => 'body_summary',
-              'format' => 'body_format',
+            'field_revision_field_new_field' => array(
+              'value' => 'field_new_field_value',
+              'format' => 'field_new_field_format',
             ),
           ),
         ),
@@ -50,8 +48,8 @@ $data = array(
         0 => 'format',
       ),
     ),
-    'field_name' => 'body',
-    'type' => 'text_with_summary',
+    'field_name' => 'field_new_field',
+    'type' => 'text',
     'module' => 'text',
     'active' => '1',
     'locked' => '0',
@@ -59,13 +57,8 @@ $data = array(
     'deleted' => '0',
     'columns' => array(
       'value' => array(
-        'type' => 'text',
-        'size' => 'big',
-        'not null' => FALSE,
-      ),
-      'summary' => array(
-        'type' => 'text',
-        'size' => 'big',
+        'type' => 'varchar',
+        'length' => '255',
         'not null' => FALSE,
       ),
       'format' => array(
@@ -76,52 +69,47 @@ $data = array(
     ),
   ),
   'field_instance' => array(
-    'label' => 'Body',
+    'label' => 'new field',
     'widget' => array(
-      'weight' => '-4',
-      'type' => 'text_textarea_with_summary',
+      'weight' => '-2',
+      'type' => 'text_textfield',
       'module' => 'text',
       'active' => 1,
       'settings' => array(
-        'rows' => '20',
-        'summary_rows' => 5,
+        'size' => '10',
       ),
     ),
     'settings' => array(
       'text_processing' => '1',
-      'display_summary' => 1,
       'user_register_form' => FALSE,
     ),
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'type' => 'text_default',
         'settings' => array(),
         'module' => 'text',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'teaser' => array(
-        'label' => 'hidden',
-        'type' => 'text_summary_or_trimmed',
-        'settings' => array(
-          'trim_length' => 600,
-        ),
-        'module' => 'text',
+        'type' => 'hidden',
+        'label' => 'above',
+        'settings' => array(),
         'weight' => 0,
       ),
     ),
-    'required' => 1,
+    'required' => 0,
     'description' => '',
     'default_value' => NULL,
-    'field_name' => 'body',
+    'field_name' => 'field_new_field',
     'entity_type' => 'node',
-    'bundle' => 'blog_post',
+    'bundle' => 'new_content_type',
     'deleted' => '0',
   ),
 );
 
 $dependencies = array(
-  'content_type.blog_post' => 'content_type.blog_post',
+  'content_type.new_content_type' => 'content_type.new_content_type',
 );
 
 $optional = array();
