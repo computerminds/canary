@@ -4,11 +4,10 @@
 
 $tracked = array (
   'content_type.blog_post' => 'a859a828e643a6f294ab3e2323a6aa6b68d2ae5c',
-  'content_type.new_content_type' => 'd37a62d1afb5da165a53e67802f473f540f5dd92',
+  'content_type.new_content_type' => '7ed7353a78d9cfa108052e92667220cf4b555486',
   'field.node.body.blog_post' => 'b26e80ee2dcbd4069780d33f31f8cb3b11b93540',
   'field.node.body.new_content_type' => '49e62e4fbd0bcbb2654ee4e19f8212f197549b67',
-  'field.node.field_new_field.blog_post' => '509b3d9c499183c6f1db5b8ffa6dd4e7903eb2c8',
-  'field.node.field_new_field.new_content_type' => '54d874ef41b9abcb15d61aa31e97036596ac2d90',
+  'field.node.field_new_field.blog_post' => 'bb3c1a0912accb32e82f5835fde76a779b176444',
   'variable.admin_theme' => '0302235c297210c67fa4b12bbda12ef63bf6d234',
   'variable.configuration_config_path' => 'e5658e2a44f0f9552808ca14933509827bb23ae8',
   'variable.field_bundle_settings_node__blog_post' => '3abd6fb48535b1e41c7d701573f2ac636c2ae305',
@@ -41,4 +40,6 @@ $modules = array(
   'node',
   'field_sql_storage',
   'text',
+  'image',
+  'block',
 );
