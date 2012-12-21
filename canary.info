@@ -18,7 +18,10 @@ dependencies[] = taxonomy
 ; Dependencies: Contrib modules
 ; ==============================================================================
 dependencies[] = admin_menu
+dependencies[] = configuration
+dependencies[] = configuration_ui
 dependencies[] = devel
+dependencies[] = diff
 dependencies[] = entitycache
 dependencies[] = module_filter
 dependencies[] = views_ui
